@@ -6,7 +6,7 @@
 
 import os
 
-from setuptools import setup
+import setuptools
 
 requires = {}
 for requirement in ["setup", "install", "tests"]:
@@ -19,7 +19,7 @@ for requirement in ["setup", "install", "tests"]:
             require_pkgs = f.read().splitlines()
         requires[requirement] = require_pkgs
 
-setup(
+setuptools.setup(
     name='py_jenkins',
     python_requires='>=2.7,!=3.0.*,!=3.1.*',
     setup_requires=requires["setup"],
