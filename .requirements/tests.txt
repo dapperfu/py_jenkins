@@ -8,3 +8,4 @@ pytest-mccabe
 pytest-pep257
 pytest-pep8
 pytest-tap
+mock
