@@ -1,0 +1,10 @@
+pytest
+pytest-html
+pytest-flake8
+pytest-benchmark
+pytest-excel
+pytest-json
+pytest-mccabe
+pytest-pep257
+pytest-pep8
+pytest-tap
