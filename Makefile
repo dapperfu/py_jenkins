@@ -1,10 +1,16 @@
+VENV=.venv
+
 .DEFAULT: null
 .PHONY: null
 null:
-	echo Target must be specified. No default option.
+	@echo No default target.
 
-venv:
-	python3 -mvenv venv
+.PHONY: venv
+venv: ${VENV}
+
+${VENV}:
+	@python3 -mvenv ${@}
+	@${VENV}/bin/python setup.py install
 
 .PHONY: lint
 lint:
@@ -17,3 +23,7 @@ flake8:
 .PHONY: test
 test:
 	@pytest
+
+.PHONY: clean
+clean:
+	rm -rf ${VENV}
